@@ -1,24 +1,32 @@
 import React from 'react';
 
-import {View, Text, StyleSheet, useColorScheme} from 'react-native';
+import {
+  View,
+  Text,
+  StyleSheet,
+  useColorScheme,
+  SafeAreaView,
+} from 'react-native';
 
 function AppPro(): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
   return (
-    <View style={Styles.conatiner}>
-      <Text style={isDarkMode ? Styles.whiteText : Styles.darkText}>
-        Hello bhai
-      </Text>
-    </View>
+    <SafeAreaView style={Styles.conatiner}>
+      <View style={Styles.conatiner}>
+        <Text style={isDarkMode ? Styles.whiteText : Styles.darkText}>
+          Hello bhai
+        </Text>
+      </View>
+    </SafeAreaView>
   );
 }
 
 const Styles = StyleSheet.create({
   conatiner: {
     flex: 1,
-    alignItems: 'flex-end',
+    alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: 'red',
+    backgroundColor: '#ecf0f1',
   },
   whiteText: {
     color: 'white',
@@ -26,7 +34,9 @@ const Styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   darkText: {
-    color: 'black',
+    color: '#34495e',
+    fontSize: 40,
+    fontWeight: 'bold',
   },
 });
 
