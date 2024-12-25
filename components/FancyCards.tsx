@@ -32,13 +32,29 @@ const styles = StyleSheet.create({
   headingText: {
     fontSize: 24,
     fontWeight: 'bold',
-    paddingHorizontal: 10,
-    paddingVertical: 10,
+    padding: 10,
   },
-  cards: {},
-  cardElevated: {},
+  cards: {
+    width: 420,
+    height: 420,
+    borderRadius: 10,
+    overflow: 'hidden',
+    margin: 10,
+    marginHorizontal: 10,
+    marginVertical: 10,
+    alignSelf: 'center',
+  },
+  cardElevated: {
+    backgroundColor: 'white',
+    elevation: 5,
+    shadowOffset: {
+      width: 1,
+      height: 1,
+    },
+  },
   cardImage: {
     height: 180,
+    marginBottom: 10,
   },
   cradBody: {
     padding: 10,
@@ -55,6 +71,7 @@ const styles = StyleSheet.create({
   },
   cardDescription: {
     color: '#f5e7e4',
+    fontSize: 14,
   },
   cardFooter: {
     marginTop: 10,
